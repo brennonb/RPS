@@ -17,13 +17,17 @@ console.log(getComputerChoice());
 
 function getHumanChoice() {
     let c = prompt("Choose: Rock, Paper, or Scissors");
-
-    if (c !== "Rock" && c !== "rock" && c !== "Paper" && c !== "paper" && c !== "Scissors" && c !== "scissors") {
-        console.log("Invalid Choice");
-    }
-    else {
-        console.log("You entered:", c);
-    }
+    let lowerCase = c.toLowerCase();
+    let upperCase = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1);
+    console.log("You entered:", upperCase);
 }
 
 getHumanChoice();
+
+
+let humanScore = 0
+let computerScore = 0
+
+function playRound(humanChoice, computerChoice) {
+    
+}
